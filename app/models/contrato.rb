@@ -10,7 +10,7 @@ class Contrato < ActiveRecord::Base
 #  validates :compradores, :presence => true
   validates :cuota, :presence => true
   def compradores_tokens=(ids)
-    self.comprador_ids = ids.split(",")
+    self.compradore_ids = ids.split(",")
   end
 
   def titular
