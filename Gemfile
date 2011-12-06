@@ -12,13 +12,17 @@ group :assets do
   gem 'uglifier'
   gem "compass", "~> 0.12.alpha.0"
 end
+
+gem 'geocoder'
+gem 'gmaps4rails'
+
 gem 'rack', '1.3.3'
 
 gem 'rails-i18n'
 gem 'cancan'
 # Javascripts runtime
 gem 'therubyracer'
-gem 'activeadmin',"0.3.2"
+gem 'activeadmin',"0.3.4"
 gem 'jquery-rails'
 gem "paper_trail"
 # paginacion

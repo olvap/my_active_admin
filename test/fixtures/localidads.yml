@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  departamento_id: 1
+  lat: 1.5
+  lng: 1.5
+  zoom: 1
+
+two:
+  name: MyString
+  departamento_id: 1
+  lat: 1.5
+  lng: 1.5
+  zoom: 1

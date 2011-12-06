@@ -1,5 +1,7 @@
 ActiveAdmin.register AdminUser do
   menu :parent => "Users"
+  
+  controller.authorize_resource 
 
   index do
     column :email

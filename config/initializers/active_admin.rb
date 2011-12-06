@@ -1,11 +1,14 @@
 ActiveAdmin.setup do |config|
+  config.register_stylesheet 'gmaps4rails.css'
 
+  config.register_javascript 'gmaps4rails/gmaps4rails.base.js.coffee'
+  config.register_javascript 'gmaps4rails/gmaps4rails.googlemaps.js.coffee' 
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Prueba"
+  config.site_title = "Colegio de farmaceuticos"
   config.allow_comments_in = [] 
   # Set the link url for the title. For example, to take 
   # users to your main site. Defaults to no link.

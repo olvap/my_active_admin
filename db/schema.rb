@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111006151034) do
+ActiveRecord::Schema.define(:version => 20111202222604) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -53,51 +53,47 @@ ActiveRecord::Schema.define(:version => 20111006151034) do
     t.datetime "updated_at"
   end
 
-  create_table "personas_addresses", :force => true do |t|
-    t.string   "street"
-    t.integer  "number"
-    t.string   "other"
-    t.string   "email"
-    t.string   "telefono"
-    t.integer  "taddress_id"
-    t.integer  "person_id"
+  create_table "departamentos", :force => true do |t|
+    t.string   "name"
+    t.integer  "provincia_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "personas_civils", :force => true do |t|
+  create_table "farmacias", :force => true do |t|
+    t.string   "name"
+    t.string   "ubicacion"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "localidad_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "farmacias_obras", :id => false, :force => true do |t|
+    t.integer  "farmacia_id"
+    t.integer  "obra_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "localidads", :force => true do |t|
+    t.string   "name"
+    t.integer  "departamento_id"
+    t.float    "lat"
+    t.float    "lng"
+    t.integer  "zoom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "obras", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "personas_people", :force => true do |t|
-    t.string   "name"
-    t.date     "born"
-    t.string   "doc"
-    t.date     "dead"
-    t.text     "observations"
-    t.integer  "civil_id"
-    t.integer  "tdoc_id"
-    t.integer  "city_id"
-    t.integer  "sexo_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "personas_sexos", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "personas_taddresses", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "personas_tdocs", :force => true do |t|
+  create_table "provincias", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

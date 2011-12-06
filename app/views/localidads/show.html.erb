@@ -1,0 +1,18 @@
+<h1><%= @localidad.name %></h1>
+
+<%= form_tag localidad_path(@localidad), :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+  </p>
+<% end %>
+
+<h3>Farmacias cercanas</h3>
+<ul>
+<% for farmacia in @farmacias %>
+  <li><%= link_to farmacia.name, admin_farmacia_path(farmacia) %> </li>
+<% end %>
+</ul>
+
+<%= gmaps(:markers => {:data => @json}) %>
+

@@ -1,7 +1,10 @@
 MyActiveAdmin::Application.routes.draw do
   
+  get "localidads/index"
+
   ActiveAdmin.routes(self)
 
+  resources :localidads
   devise_for :admin_users, ActiveAdmin::Devise.config
   # The priority is based upon order of creation:
   # first created -> highest priority.
