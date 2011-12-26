@@ -1,4 +1,7 @@
 class LocalidadsController < ApplicationController
+
+  load_and_authorize_resource
+
   def show
     @localidad = Localidad.find(params[:id])
 
