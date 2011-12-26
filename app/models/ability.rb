@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
 
-    user ||= User.new # Guest user
+    user ||= AdminUser.new # Guest user
 
     can :read, :all # todos pueden ver todo.  
 
