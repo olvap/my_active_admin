@@ -6,16 +6,16 @@ class FarmaciaTest < ActiveSupport::TestCase
   # end
   test "pertenece a una localidad" do
     farmacia = farmcias(:one)
-    santa_fe = farmacia.departamento
+    santa_fe = farmacia.localidad
     assert lacapital.kind_of? Localidad
   end
 
   test "debe tener un nombre" do
-    f = Farmcias.new
-    assert l.invalid?
+    f = Farmacia.new
+    assert f.invalid?
     
     f.name = "Bonazolla"
-    assert l.valid?
+    assert f.valid?
   end
 
   test "El nombre no puede estar repetido" do

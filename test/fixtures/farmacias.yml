@@ -3,13 +3,13 @@
 one:
   name: MyString
   ubicacion: MyString
-  lat: 1.5
-  lng: 1.5
+  latitude: 1.5
+  longitude: 1.5
   localidad_id: 1
 
 two:
   name: MyString
   ubicacion: MyString
-  lat: 1.5
-  lng: 1.5
+  latitude: 1.5
+  longitude: 1.5
   localidad_id: 1
