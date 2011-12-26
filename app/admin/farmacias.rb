@@ -22,6 +22,7 @@ ActiveAdmin.register Farmacia do
       f.input :name
       f.input :ubicacion
       f.input :localidad
+      f.input :obras, :as => :check_boxes, :collection => Obra.all
     end
     f.buttons
   end
